@@ -1,0 +1,177 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF AniGroup-5-Intrp1-transform Transform {
+	translation	0 0 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	Extrusion {
+			beginCap	TRUE
+			endCap	TRUE
+			ccw	TRUE
+			convex	TRUE
+			creaseAngle	0
+			solid	TRUE
+			crossSection	[ 1 1,
+					  1 -1,
+					  -1 -1,
+					  -1 1,
+					  1 1 ]
+			orientation	[ 0 0 1  0,
+					  0 0 1  0 ]
+			scale	[ 1 1,
+					  1 1 ]
+			spine	[ 0 0 0,
+					  0 1 0 ]
+		}
+
+	}
+}
+Transform {
+	translation	0 0 0
+	rotation	-0.17091 0.501517 0.848098  3.35096
+	scale	0.999999 1 1
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	IndexedFaceSet {
+			color	NULL
+			coord	Coordinate {
+				point	[ -1 1 0,
+						  -1 -1 0,
+						  1 -1 0,
+						  1 1 0 ]
+			}
+
+			normal	NULL
+			texCoord	NULL
+			ccw	FALSE
+			colorPerVertex	FALSE
+			convex	FALSE
+			normalPerVertex	TRUE
+			creaseAngle	0
+			solid	FALSE
+			coordIndex	[ 0, 1, 2, 3, -1 ]
+			colorIndex	[  ]
+			normalIndex	-1
+		}
+
+	}
+}
+Transform {
+	translation	-15.5462 -1.44878 -17.3986
+	rotation	-1 0 0  0.0904967
+	scale	1.56985 1.56985 1.56985
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				diffuseColor	0.8 0.242536 0.211339
+				transparency	0.6
+			}
+
+			texture	DEF Cement ImageTexture {
+				url	"texture/Cement.gif"
+			}
+
+		}
+
+		geometry	ElevationGrid {
+			color	NULL
+			normal	NULL
+			colorPerVertex	FALSE
+			creaseAngle	1.44
+			solid	TRUE
+			xDimension	10
+			xSpacing	1.4
+			zDimension	10
+			zSpacing	1.4
+			height	[ 0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0,
+					  0, 0, 0, 0 ]
+		}
+
+	}
+}
+SpotLight {
+	cutOffAngle	0.970841
+	direction	-0.0462735 -0.997774 0.0480111
+	location	-8.62879 -5.25774 -47.2101
+}
+DEF AniGroup-5-Intrp7-transform Transform {
+	translation	1.96024 -8.26193 -20.0973
+	rotation	0.139573 0.104884 -0.984641  1.22469
+	scale	1.08053 1.08053 1.08053
+	center	3.26029 2.38198 -0.766136
+	children [ 
+	    PointLight {
+		    color	1 0.343922 0.304923
+		    location	-15.0121 -4.12929 -14.491
+		    on	TRUE
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Box {
+		    }
+
+	    }
+	]
+}
+DEF AniGroup-5-TIMER TimeSensor {
+	cycleInterval	1
+	enabled	TRUE
+	loop	FALSE
+}
+DEF AniGroup-5-Intrp1-translation PositionInterpolator {
+	key	[ 0, 0.0197461, 0.0394922, 0.199577,
+			  0.25952, 0.479549, 1 ]
+	keyValue	[ 0 0 0,
+			  0 0 0,
+			  0 0 0,
+			  0 0 0,
+			  0 0 0,
+			  0 0 0,
+			  0 0 0 ]
+}
+ROUTE AniGroup-5-TIMER.fraction_changed TO AniGroup-5-Intrp1-translation.set_fraction
+ROUTE AniGroup-5-Intrp1-translation.value_changed TO AniGroup-5-Intrp1-transform.set_translation

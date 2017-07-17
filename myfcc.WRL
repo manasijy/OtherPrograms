@@ -1,0 +1,92 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF Crystal Transform {
+	bboxSize	4 4 4
+	translation	-14.2169 6.4275 -36.0847
+	rotation	-0.54495 0.778498 0.3114  0.536065
+	scale	10.8 10.8 10.8
+	children [ 
+	    SpotLight {
+	    }
+
+	    SpotLight {
+	    }
+
+	    Background {
+		    groundAngle	[ 0.9, 1.5, 1.57 ]
+		    groundColor	[ 0 0.8 0,
+				      0.174249 0.82 0.187362,
+				      0.467223 0.82 0.445801,
+				      0.621997 0.67 0.600279 ]
+		    skyAngle	[ 0.1, 1.2, 1.57 ]
+		    skyColor	[ 0.76238 0.8 0.1427,
+				      0.277798 0.219779 0.7,
+				      0.222549 0.390234 0.7,
+				      0.60094 0.662637 0.69 ]
+	    }
+
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.8 0.553974 0.459092
+				    emissiveColor	0 0 0
+				    shininess	0.6
+				    specularColor	0.18 0.18 0.18
+				    transparency	0
+			    }
+
+		    }
+
+		    geometry	Box {
+		    }
+
+	    }
+
+	    Transform {
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    shininess	0.2
+					    transparency	0
+				    }
+
+			    }
+
+			    geometry	NULL
+		    }
+	    }
+
+	    DEF AniGroup-1-TIMER TimeSensor {
+		    cycleInterval	1
+		    loop	TRUE
+	    }
+	]
+}
+Transform {
+	translation	-3.69311 2.37095 -38.5773
+	rotation	0 1 0  0.667467
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	Text {
+			string	"[110]"
+			length	0.1
+		}
+
+	}
+}
+Viewpoint {
+	fieldOfView	3.14
+	position	-984.562 84.5543 1040.92
+}
